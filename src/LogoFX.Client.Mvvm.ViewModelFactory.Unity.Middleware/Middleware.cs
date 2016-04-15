@@ -1,4 +1,5 @@
-﻿using LogoFX.Client.Bootstrapping;
+﻿using LogoFX.Bootstrapping;
+using LogoFX.Client.Bootstrapping;
 using LogoFX.Client.Bootstrapping.Adapters.Unity;
 using LogoFX.Client.Mvvm.ViewModel.Contracts;
 using Solid.Practices.Middleware;
