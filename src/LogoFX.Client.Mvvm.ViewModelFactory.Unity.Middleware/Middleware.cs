@@ -6,19 +6,18 @@ using Solid.Practices.Middleware;
 namespace LogoFX.Client.Mvvm.ViewModelFactory.Unity
 {
     /// <summary>
-    /// Middleware that registers view model factory implemented using LogoFX Simple Container.
-    /// </summary>
-    /// <typeparam name="TRootObject">The type of the root object.</typeparam>    
-    public class RegisterViewModelFactoryMiddleware<TRootObject> : 
-        IMiddleware<IBootstrapperWithContainerAdapter<TRootObject, UnityContainerAdapter>>        
+    /// Middleware that registers view model factory implemented using Unity Container.
+    /// </summary>    
+    public class RegisterViewModelFactoryMiddleware : 
+        IMiddleware<IBootstrapperWithContainerAdapter<UnityContainerAdapter>>        
     {
         /// <summary>
         /// Applies the middleware on the specified object.
         /// </summary>
         /// <param name="object">The object.</param>
         /// <returns></returns>
-        public IBootstrapperWithContainerAdapter<TRootObject, UnityContainerAdapter> 
-            Apply(IBootstrapperWithContainerAdapter<TRootObject, UnityContainerAdapter> @object)
+        public IBootstrapperWithContainerAdapter<UnityContainerAdapter> 
+            Apply(IBootstrapperWithContainerAdapter<UnityContainerAdapter> @object)
         {
             @object.ContainerAdapter.RegisterSingleton<IViewModelFactory, ViewModelFactory>();
             return @object;
@@ -26,19 +25,18 @@ namespace LogoFX.Client.Mvvm.ViewModelFactory.Unity
     }
 
     /// <summary>
-    /// Bootstrapper extensions.
+    /// The bootstrapper extension methods.
     /// </summary>
     public static class BootstrapperExtensions
     {
         /// <summary>
-        /// Uses the view model factory which is based on LogoFX Simple Container.
-        /// </summary>
-        /// <typeparam name="TRootObject">The type of the root object.</typeparam>
+        /// Uses the view model factory which is based on Unity Container.
+        /// </summary>        
         /// <param name="bootstrapper">The bootstrapper.</param>
-        public static IBootstrapperWithContainerAdapter<TRootObject, UnityContainerAdapter> UseViewModelFactory<TRootObject>(
-            this IBootstrapperWithContainerAdapter<TRootObject, UnityContainerAdapter> bootstrapper)
+        public static IBootstrapperWithContainerAdapter<UnityContainerAdapter> UseViewModelFactory(
+            this IBootstrapperWithContainerAdapter<UnityContainerAdapter> bootstrapper)
         {
-            return bootstrapper.Use(new RegisterViewModelFactoryMiddleware<TRootObject>());            
+            return bootstrapper.Use(new RegisterViewModelFactoryMiddleware());            
         }
     }
 }
