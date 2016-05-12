@@ -19,7 +19,7 @@ namespace LogoFX.Client.Mvvm.ViewModelFactory.Unity
         public IBootstrapperWithContainerAdapter<UnityContainerAdapter> 
             Apply(IBootstrapperWithContainerAdapter<UnityContainerAdapter> @object)
         {
-            @object.ContainerAdapter.RegisterSingleton<IViewModelFactory, ViewModelFactory>();
+            @object.Registrator.RegisterSingleton<IViewModelFactory, ViewModelFactory>();
             return @object;
         }
     }
