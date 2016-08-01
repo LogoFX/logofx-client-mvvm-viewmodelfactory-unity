@@ -1,25 +1,27 @@
-﻿using LogoFX.Bootstrapping;
-using LogoFX.Client.Bootstrapping.Adapters.Unity;
-using LogoFX.Client.Mvvm.ViewModel.Contracts;
+﻿using LogoFX.Client.Mvvm.ViewModel.Contracts;
+using Solid.Bootstrapping;
+using Solid.Extensibility;
 using Solid.Practices.Middleware;
 
 namespace LogoFX.Client.Mvvm.ViewModelFactory.Unity
 {
     /// <summary>
-    /// Middleware that registers view model factory implemented using Unity Container.
+    /// Middleware that registers view model factory.
     /// </summary>    
-    public class RegisterViewModelFactoryMiddleware : 
-        IMiddleware<IBootstrapperWithContainerAdapter<UnityContainerAdapter>>        
+    public class RegisterViewModelFactoryMiddleware<TBootstrapper, TViewModelFactory> : 
+        IMiddleware<TBootstrapper> 
+        where TBootstrapper : class, IHaveContainerRegistrator
+        where TViewModelFactory : class, IViewModelFactory  
     {
         /// <summary>
         /// Applies the middleware on the specified object.
         /// </summary>
         /// <param name="object">The object.</param>
         /// <returns></returns>
-        public IBootstrapperWithContainerAdapter<UnityContainerAdapter> 
-            Apply(IBootstrapperWithContainerAdapter<UnityContainerAdapter> @object)
+        public TBootstrapper 
+            Apply(TBootstrapper @object)
         {
-            @object.Registrator.RegisterSingleton<IViewModelFactory, ViewModelFactory>();
+            @object.Registrator.RegisterSingleton<IViewModelFactory, TViewModelFactory>();
             return @object;
         }
     }
@@ -33,10 +35,11 @@ namespace LogoFX.Client.Mvvm.ViewModelFactory.Unity
         /// Uses the view model factory which is based on Unity Container.
         /// </summary>        
         /// <param name="bootstrapper">The bootstrapper.</param>
-        public static IBootstrapperWithContainerAdapter<UnityContainerAdapter> UseViewModelFactory(
-            this IBootstrapperWithContainerAdapter<UnityContainerAdapter> bootstrapper)
+        public static TBootstrapper UseViewModelFactory<TBootstrapper>(
+            this TBootstrapper bootstrapper) 
+            where TBootstrapper : class, IExtensible<TBootstrapper>, IHaveContainerRegistrator
         {
-            return bootstrapper.Use(new RegisterViewModelFactoryMiddleware());            
+            return bootstrapper.Use(new RegisterViewModelFactoryMiddleware<TBootstrapper, ViewModelFactory>());            
         }
     }
 }
