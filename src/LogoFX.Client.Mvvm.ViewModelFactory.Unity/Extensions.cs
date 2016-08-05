@@ -1,4 +1,5 @@
-﻿using Solid.Bootstrapping;
+﻿using Microsoft.Practices.Unity;
+using Solid.Bootstrapping;
 using Solid.Extensibility;
 
 namespace LogoFX.Client.Mvvm.ViewModelFactory.Unity
@@ -9,7 +10,7 @@ namespace LogoFX.Client.Mvvm.ViewModelFactory.Unity
     public static class BootstrapperExtensions
     {
         /// <summary>
-        /// Uses the view model factory which is based on LogoFX Simple Container.
+        /// Uses the view model factory which is based on <see cref="UnityContainer"/>
         /// </summary>        
         /// <param name="bootstrapper">The bootstrapper.</param>
         public static TBootstrapper UseViewModelFactory<TBootstrapper>(
