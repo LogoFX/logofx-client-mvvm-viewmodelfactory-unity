@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Client.Mvvm.ViewModelFactory.Unity", "LogoFX.Client.Mvvm.ViewModelFactory.Unity\LogoFX.Client.Mvvm.ViewModelFactory.Unity.csproj", "{B4E59990-EA10-451D-982C-8736E333A26A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoFX.Client.Mvvm.ViewModelFactory.Unity.NET45", "LogoFX.Client.Mvvm.ViewModelFactory.Unity\LogoFX.Client.Mvvm.ViewModelFactory.Unity.NET45.csproj", "{A7351E32-45D6-464C-99FD-D4FD64695938}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B4E59990-EA10-451D-982C-8736E333A26A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B4E59990-EA10-451D-982C-8736E333A26A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B4E59990-EA10-451D-982C-8736E333A26A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B4E59990-EA10-451D-982C-8736E333A26A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7351E32-45D6-464C-99FD-D4FD64695938}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7351E32-45D6-464C-99FD-D4FD64695938}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7351E32-45D6-464C-99FD-D4FD64695938}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7351E32-45D6-464C-99FD-D4FD64695938}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
