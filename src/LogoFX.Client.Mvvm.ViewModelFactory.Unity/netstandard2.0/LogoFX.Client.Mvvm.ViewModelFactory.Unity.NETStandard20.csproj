@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>LogoFX.Client.Mvvm.ViewModelFactory.Unity</AssemblyName>
+    <RootNamespace>LogoFX.Client.Mvvm.ViewModelFactory.Unity</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\Bin\netstandard2.0\Release\</OutputPath>
+    <DocumentationFile>..\..\Bin\netstandard2.0\Release\netstandard2.0\LogoFX.Client.Mvvm.ViewModelFactory.Unity.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\src\Extensions.cs" Link="Extensions.cs" />
+    <Compile Include="..\src\ViewModelFactory.cs" Link="ViewModelFactory.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LogoFX.Client.Mvvm.ViewModelFactory" Version="1.2.1-rc1" />
+    <PackageReference Include="Unity" Version="5.3.2" />
+  </ItemGroup>
+
+</Project>

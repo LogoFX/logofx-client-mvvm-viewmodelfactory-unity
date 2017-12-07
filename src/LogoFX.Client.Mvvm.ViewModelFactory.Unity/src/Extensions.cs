@@ -1,6 +1,6 @@
-﻿using Microsoft.Practices.Unity;
-using Solid.Bootstrapping;
+﻿using Solid.Bootstrapping;
 using Solid.Extensibility;
+using Unity;
 
 namespace LogoFX.Client.Mvvm.ViewModelFactory.Unity
 {
