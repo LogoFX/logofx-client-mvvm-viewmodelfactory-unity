@@ -12,14 +12,9 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <OutputPath>..\..\Bin\netstandard2.0\Release\</OutputPath>
-    <DocumentationFile>..\..\Bin\netstandard2.0\Release\LogoFX.Client.Mvvm.ViewModelFactory.Unity.xml</DocumentationFile>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Include="..\src\Extensions.cs" Link="Extensions.cs" />
-    <Compile Include="..\src\ViewModelFactory.cs" Link="ViewModelFactory.cs" />
-  </ItemGroup>
+    <OutputPath>..\Bin\netstandard2.0\Release\</OutputPath>
+    <DocumentationFile>..\Bin\netstandard2.0\Release\LogoFX.Client.Mvvm.ViewModelFactory.Unity.xml</DocumentationFile>
+  </PropertyGroup> 
 
   <ItemGroup>
     <PackageReference Include="LogoFX.Client.Mvvm.ViewModelFactory" Version="1.2.1-rc2" />
