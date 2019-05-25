@@ -31,11 +31,11 @@ namespace LogoFX.Client.Mvvm.ViewModelFactory.Unity
         /// <returns></returns>
         public TViewModel CreateModelWrapper<TModel, TViewModel>(TModel model) where TViewModel : IModelWrapper<TModel>
         {
-            return _unityContainer.Resolve<TViewModel>(new ParameterOverride("model", model));
+            return _unityContainer.Resolve<TViewModel>(new ParameterOverride(nameof(model), model));
         }
 
         /// <summary>
-        /// Resolves the view model via inner lifetime scope while applying inner middelware.
+        /// Resolves the view model via inner lifetime scope while applying inner middleware.
         /// </summary>
         /// <typeparam name="TViewModel">The type of the view model.</typeparam>
         /// <param name="registerInnerMiddleware">The specified inner middleware.</param>
