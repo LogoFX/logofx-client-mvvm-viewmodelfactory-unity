@@ -14,8 +14,8 @@
     <summary>LogoFX Client Mvvm ViewModelFactory Unity containing implementation of view model factory interface for Unity.</summary>
     <releaseNotes>Updated dependent packages</releaseNotes>
     <dependencies>
-      <dependency id="Solid.Bootstrapping" version="2.3.0-rc1" />
-      <dependency id="Solid.Extensibility" version="2.3.0-rc1" />
+      <dependency id="Solid.Bootstrapping" version="2.3.0" />
+      <dependency id="Solid.Extensibility" version="2.3.0" />
       <dependency id="LogoFX.Client.Mvvm.ViewModelFactory" version="2.2.0-rc2" />
       <dependency id="Unity" version="5.11.10" />
     </dependencies>
