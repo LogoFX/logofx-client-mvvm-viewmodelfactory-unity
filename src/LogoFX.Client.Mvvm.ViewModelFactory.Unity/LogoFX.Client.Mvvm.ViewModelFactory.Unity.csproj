@@ -1,23 +1,20 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <Version>2.1.0</Version>
+    <Version>2.2.0</Version>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <OutputPath>..\Bin\netstandard2.0\Release\</OutputPath>
-    <DocumentationFile>..\Bin\netstandard2.0\Release\LogoFX.Client.Mvvm.ViewModelFactory.Unity.xml</DocumentationFile>
-    <DebugType>full</DebugType>
+    <OutputPath>..\Bin\netstandard\Release\</OutputPath>
+    <DocumentationFile>..\Bin\netstandard\Release\LogoFX.Client.Mvvm.ViewModelFactory.Unity.xml</DocumentationFile>
+    <EmbedAllSources>True</EmbedAllSources>
+    <DebugType>embedded</DebugType>
     <DebugSymbols>true</DebugSymbols>
-  </PropertyGroup> 
-
+  </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="LogoFX.Client.Mvvm.ViewModelFactory" Version="2.1.0" />
-    <PackageReference Include="Solid.Bootstrapping" Version="2.2.0" />
-    <PackageReference Include="Solid.Extensibility" Version="2.2.0" />
-    <PackageReference Include="Unity" Version="5.11.1" />
+    <PackageReference Include="LogoFX.Client.Mvvm.ViewModelFactory" Version="2.2.0-rc2" />
+    <PackageReference Include="Solid.Bootstrapping" Version="2.3.0" />
+    <PackageReference Include="Solid.Extensibility" Version="2.3.0" />
+    <PackageReference Include="Unity" Version="5.11.10" />
   </ItemGroup>
-
 </Project>
