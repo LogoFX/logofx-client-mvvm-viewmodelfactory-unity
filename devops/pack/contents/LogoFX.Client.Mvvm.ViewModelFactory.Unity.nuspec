@@ -12,12 +12,14 @@
     <iconUrl>https://github.com/LogoFX/logofx-assets/blob/master/icons/icon.png?raw=true</iconUrl>
     <description>LogoFX Client Mvvm ViewModelFactory Unity containing implementation of view model factory interface for Unity.</description>
     <summary>LogoFX Client Mvvm ViewModelFactory Unity containing implementation of view model factory interface for Unity.</summary>
-    <releaseNotes>Updated dependent packages</releaseNotes>
+    <releaseNotes></releaseNotes>
     <dependencies>
       <dependency id="Solid.Bootstrapping" version="2.3.1" />
       <dependency id="Solid.Extensibility" version="2.3.1" />
       <dependency id="LogoFX.Client.Mvvm.ViewModelFactory" version="2.2.0" />
       <dependency id="Unity" version="5.11.10" />
     </dependencies>
+     <tags>framework logofx dotnet</tags>
+    <repository type="Open Source" url="https://github.com/LogoFX/logofx-client-mvvm-viewmodelfactory-unity" />
   </metadata>
 </package>
