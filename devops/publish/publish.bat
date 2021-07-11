@@ -1,5 +1,5 @@
 SET package_name=LogoFX.Client.Mvvm.ViewModelFactory.Unity
-SET package_version=2.2.0
+SET package_version=2.2.1-rc1
 cd ../../src
 nuget restore
 cd ../devops/build
